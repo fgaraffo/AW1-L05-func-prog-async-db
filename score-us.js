@@ -8,9 +8,8 @@ function Exam(code, name, CFU, score, laude, date) {
   this.CFU = CFU;
   this.score = score;
   this.laude = laude;
-  this.date = date;
-  
-}
+  this.date = date;  
+};
 
 function ExamList() {
   this.list = [];
@@ -46,7 +45,30 @@ function ExamList() {
 
     return avg;
   };
-}
+};
+
+function usScore (exam) {/*
+  const us = exam.list.map( element => {
+   if (element.score > 27) return 'A'; 
+   else if (element.score > 24) return 'B'; 
+   else if (element.score > 19) return 'C'; 
+   else return 'D';
+  });
+*/
+
+const us = exam.list.filter( score => {
+  if (score > 27) return 'A'; 
+  else if (score > 24) return 'B'; 
+  else if (score > 19) return 'C'; 
+  else return 'D';
+})
+
+
+
+  const y = [...exam.list];
+  for (const [i,el] of us.entries()){ y[i].score = el; }
+  return y;
+};
 
 const wa1 = new Exam('01KTF', 'Web Applications I', 6, 30, false, dayjs('2021-06-01'));
 const sdp = new Exam('02XXX', 'System and Device Programming', 10, 21, false, dayjs('2021-07-01'));
@@ -55,6 +77,7 @@ const exams = new ExamList();
 exams.add(wa1);
 exams.add(sdp);
 
+/*
 console.log("FIND");
 console.log(exams.find('01KTF'));
 console.log(exams.find('031KTF'));
@@ -67,5 +90,8 @@ console.log("BY SCORE");
 console.log(exams.listByScore());
 console.log("AVERAGE");
 console.log(exams.average());
+*/
+
+console.log(usScore(exams));
 
 debugger;
