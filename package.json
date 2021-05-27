@@ -1,7 +1,6 @@
 {
   "name": "05-promises",
   "version": "1.0.0",
-  "description": "",
   "main": "score-us.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +8,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dayjs": "^1.10.4"
-  }
+    "dayjs": "^1.10.4",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flg12/AW1-L05-promises.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flg12/AW1-L05-promises/issues"
+  },
+  "homepage": "https://github.com/flg12/AW1-L05-promises#readme",
+  "description": ""
 }

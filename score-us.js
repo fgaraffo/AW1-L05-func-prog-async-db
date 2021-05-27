@@ -8,7 +8,7 @@ function Exam(code, name, CFU, score, laude, date) {
   this.CFU = CFU;
   this.score = score;
   this.laude = laude;
-  this.date = date;
+  this.date = dayjs(date);
   
 }
 
@@ -96,4 +96,4 @@ console.log(usScores);
 console.log(four, three, two, one);
 console.log(gpa);
 
- debugger;
+debugger;
