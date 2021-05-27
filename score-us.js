@@ -47,23 +47,15 @@ function ExamList() {
   };
 };
 
-function usScore (exam) {/*
+// funzione per convertire il voto (score) da numeri a lettere
+function usScore (exam) {
+
   const us = exam.list.map( element => {
    if (element.score > 27) return 'A'; 
    else if (element.score > 24) return 'B'; 
    else if (element.score > 19) return 'C'; 
    else return 'D';
   });
-*/
-
-const us = exam.list.filter( score => {
-  if (score > 27) return 'A'; 
-  else if (score > 24) return 'B'; 
-  else if (score > 19) return 'C'; 
-  else return 'D';
-})
-
-
 
   const y = [...exam.list];
   for (const [i,el] of us.entries()){ y[i].score = el; }
